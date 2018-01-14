@@ -7,5 +7,6 @@ RUN cd /opt/app && npm install
 
 WORKDIR /opt/app
 
+ENV HOST 0.0.0.0
 
 CMD ["npm", "run", "prod"]
