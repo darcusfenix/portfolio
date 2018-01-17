@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div>My blog navigation bar here</div>
-    <nuxt />
+    <main>
+      <div class="container">
+        <nuxt />
+      </div>
+    </main>
   </div>
 </template>
