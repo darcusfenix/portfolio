@@ -43,6 +43,7 @@ module.exports = {
     }
   },
   modules: [
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/font-awesome'
   ]
 }

@@ -20,3 +20,9 @@ p {
   color: #111215;
   line-height: 30px;
 }
+img {
+  max-width: 100%;
+}
+.mg-top-70{
+  margin-top: 70px;
+}

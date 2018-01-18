@@ -6,9 +6,10 @@
         :title="post.title"
         :titleUrl="post.titleUrl"
         :description="post.description"
+        :date="post.date"
+        :totalShared="post.totalShared"
       />
     </div>
-
   </section>
 
 </template>
@@ -28,19 +29,25 @@
         name: data.name,
         posts: [
           {
-            title: 'title 1',
-            titleUrl: 'title-1',
-            description: 'Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra'
+            title: '!Renuncio!',
+            titleUrl: 'renuncio',
+            description: '¿Ya estás listo para renunciar? ¿Sabes si es el momento? ¿Por qué lo haces?',
+            date: '1 de Feb.',
+            totalShared: 250
           },
           {
             title: 'title 2',
             titleUrl: 'title-2',
-            description: 'Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra'
+            description: '2 Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra',
+            date: '5 de Feb.',
+            totalShared: 50
           },
           {
             title: 'title 3',
             titleUrl: 'title-3',
-            description: 'Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra'
+            description: '3 Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra',
+            date: '11 de Feb.',
+            totalShared: 10
           }
         ]
       }

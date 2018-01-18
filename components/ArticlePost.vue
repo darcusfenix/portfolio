@@ -9,16 +9,15 @@
       <h5><a :href="'/blog/'+ titleUrl + '.html'">{{title}}</a></h5>
       <p>{{description}}</p>
       <ul class="article-post-meta list-inline">
-        <li class="list-inline-item"><a href="#">john doe</a></li>
-        <li class="list-inline-item"><a href="#">23 oct</a></li>
-        <li class="list-inline-item"><a href="#">2 comment</a></li>
+        <li class="list-inline-item"><a href="#">{{date}}</a></li>
+        <li class="list-inline-item"><a href="#">{{totalShared}}</a></li>
       </ul>
     </div>
   </div>
 </template>
 <script>
   export default {
-    props: ['title', 'titleUrl', 'description']
+    props: ['title', 'titleUrl', 'description', 'date', 'totalShared']
   }
 </script>
 <style>
