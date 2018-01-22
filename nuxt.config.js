@@ -14,6 +14,7 @@ module.exports = {
     ]
   },
   css: [
+    '@darcusfenix/bootstrap-portfolio',
     'assets/main.css'
   ],
   /*
@@ -43,7 +44,12 @@ module.exports = {
     }
   },
   modules: [
-    'bootstrap-vue/nuxt',
     '@nuxtjs/font-awesome'
-  ]
+  ],
+  watchers: {
+    webpack: {
+      aggregateTimeout: 300,
+      poll: 1000
+    }
+  }
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="blog-banner-inner" data-parallax="scroll">
+    <section class="blog-banner-wrapped">
       <div class="container">
         <h2>BLOG DETAILS</h2>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
@@ -11,19 +11,19 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-8">
-            <div class="single-blog-post">
-              <article class="type-post single-post">
-                <div class="post-image">
+            <div class="single-blog-article">
+              <article class="type-article single-article">
+                <div class="article-image">
                   <img src="http://beyarsolutions.com/miki/miki/static/img/blog-3.png" title="Blog List" alt="Blog List">
                   <div class="title-bar">
                     <label>
                       <a href="#">Work</a>
                     </label>
                     <h3>Take a Look Around our App</h3>
-                    <span class="post-date">Novembar 24, 2017</span>
+                    <span class="article-date">Novembar 24, 2017</span>
                   </div>
                 </div>
-                <div class="post-content">
+                <div class="article-content">
                   <div class="dropcap">
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. C0
                       um sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet,
@@ -81,9 +81,9 @@
                     consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
                     parturient montes, nascetur ridiculus mus.</p>
                 </div>
-                <div class="post-meta"><div class="meta-box"> <span><em>By</em> Luther</span> <span><a href="#"><i class="fa fa-comment-o"></i>3 comments</a></span>
+                <div class="article-meta"><div class="meta-box"> <span><em>By</em> Luther</span> <span><a href="#"><i class="fa fa-comment-o"></i>3 comments</a></span>
                 </div>
-                  <div class="post-share">
+                  <div class="article-share">
                     <a href="#"><i class="fa fa-heart-o"></i></a>
                     <a href="#"><i class="fa fa-facebook"></i></a>
                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -106,7 +106,7 @@
   }
 </script>
 <style>
-  .blog-banner-inner {
+  .blog-banner-wrapped {
     padding: 200px 0 100px;
     text-align: center;
     position: relative;
@@ -115,17 +115,17 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-  .blog-banner-inner .container {
+  .blog-banner-wrapped .container {
     position: relative;
     z-index: 1;
   }
-  .blog-banner-inner h2 {
+  .blog-banner-wrapped h2 {
     color: #fff;
     font-size: 32px;
     font-weight: 600;
     margin: 0 0 15px;
   }
-  .blog-banner-inner p {
+  .blog-banner-wrapped p {
     color: #fff;
     width: 550px;
     max-width: 100%;
@@ -134,17 +134,17 @@
   .blog-single {
     padding: 60px 0;
   }
-  .type-post {
+  .type-article {
     padding: 15px;
     background: #fff;
     box-shadow: rgba(58,78,95,0.2) 0 10px 16px, rgba(58,78,95,0.05) 0 -5px 16px;
     margin-bottom: 30px;
   }
-  .type-post .post-image {
+  .type-article .article-image {
     margin-bottom: 20px;
     position: relative;
   }
-  .type-post .title-bar {
+  .type-article .title-bar {
     padding: 20px;
     position: absolute;
     bottom: 0;
@@ -152,13 +152,13 @@
     right: 0;
     background: rgba(0,0,0,0.65);
   }
-  .type-post .title-bar label {
+  .type-article .title-bar label {
     font-style: italic;
     margin: 0;
     padding: 0;
     font-size: 13px;
   }
-  .type-post .title-bar h3 {
+  .type-article .title-bar h3 {
     font-weight: 600;
     font-size: 26px;
     margin: 0;
@@ -179,21 +179,21 @@
     margin: 1.5em auto;
     text-align: center;
   }
-  .type-post .title-bar .post-date {
+  .type-article .title-bar .article-date {
     color: #fff;
     font-size: 12px;
   }
-  .type-post p {
+  .type-article p {
     line-height: 1.7;
   }
-  .single-post blockquote {
+  .single-article blockquote {
     padding: 0px 20px;
     margin: 30px 0;
     border-left: 5px solid #ccc;
     font-style: italic;
     font-size: 14px;
   }
-  .type-post .post-meta {
+  .type-article .article-meta {
     width: 100%;
     display: inline-block;
     vertical-align: top;
@@ -201,20 +201,20 @@
     padding: 15px 0 0;
     margin-top: 15px;
   }
-  .type-post .post-meta .meta-box {
+  .type-article .article-meta .meta-box {
     float: left;
   }
-  .type-post .post-meta .meta-box span {
+  .type-article .article-meta .meta-box span {
     font-size: 12px;
     margin-right: 8px;
   }
-  .type-post .post-meta .meta-box span a {
+  .type-article .article-meta .meta-box span a {
     color: #000;
   }
-  .type-post .post-meta .post-share {
+  .type-article .article-meta .article-share {
     float: right;
   }
-  .type-post .post-meta .post-share a {
+  .type-article .article-meta .article-share a {
     width: 28px;
     height: 28px;
     text-align: center;
