@@ -101,12 +101,12 @@
 
 </template>
 <script>
-  export default {
-    layout: 'blog'
-  }
+export default {
+    layout: "blog"
+}
 </script>
 <style>
-  .blog-banner-wrapped {
+.blog-banner-wrapped {
     padding: 200px 0 100px;
     text-align: center;
     position: relative;
@@ -114,107 +114,108 @@
     background-image: url("http://beyarsolutions.com/miki/miki/static/img/blog-banner1.png");
     background-repeat: no-repeat;
     background-position: center;
-  }
-  .blog-banner-wrapped .container {
+}
+.blog-banner-wrapped .container {
     position: relative;
     z-index: 1;
-  }
-  .blog-banner-wrapped h2 {
+}
+.blog-banner-wrapped h2 {
     color: #fff;
     font-size: 32px;
     font-weight: 600;
     margin: 0 0 15px;
-  }
-  .blog-banner-wrapped p {
+}
+.blog-banner-wrapped p {
     color: #fff;
     width: 550px;
     max-width: 100%;
     margin: 0 auto;
-  }
-  .blog-single {
+}
+.blog-single {
     padding: 60px 0;
-  }
-  .type-article {
+}
+.type-article {
     padding: 15px;
     background: #fff;
-    box-shadow: rgba(58,78,95,0.2) 0 10px 16px, rgba(58,78,95,0.05) 0 -5px 16px;
+    box-shadow: rgba(58, 78, 95, 0.2) 0 10px 16px,
+        rgba(58, 78, 95, 0.05) 0 -5px 16px;
     margin-bottom: 30px;
-  }
-  .type-article .article-image {
+}
+.type-article .article-image {
     margin-bottom: 20px;
     position: relative;
-  }
-  .type-article .title-bar {
+}
+.type-article .title-bar {
     padding: 20px;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0,0,0,0.65);
-  }
-  .type-article .title-bar label {
+    background: rgba(0, 0, 0, 0.65);
+}
+.type-article .title-bar label {
     font-style: italic;
     margin: 0;
     padding: 0;
     font-size: 13px;
-  }
-  .type-article .title-bar h3 {
+}
+.type-article .title-bar h3 {
     font-weight: 600;
     font-size: 26px;
     margin: 0;
     padding: 0 0 5px;
     color: #fff;
-  }
-  .alignright {
+}
+.alignright {
     float: right;
-    margin: .5em 0 .5em 2em;
+    margin: 0.5em 0 0.5em 2em;
     text-align: right;
-  }
-  .alignleft {
+}
+.alignleft {
     float: left;
-    margin: .5em 2em .5em 0;
-  }
-  .aligncenter {
+    margin: 0.5em 2em 0.5em 0;
+}
+.aligncenter {
     display: block;
     margin: 1.5em auto;
     text-align: center;
-  }
-  .type-article .title-bar .article-date {
+}
+.type-article .title-bar .article-date {
     color: #fff;
     font-size: 12px;
-  }
-  .type-article p {
+}
+.type-article p {
     line-height: 1.7;
-  }
-  .single-article blockquote {
+}
+.single-article blockquote {
     padding: 0px 20px;
     margin: 30px 0;
     border-left: 5px solid #ccc;
     font-style: italic;
     font-size: 14px;
-  }
-  .type-article .article-meta {
+}
+.type-article .article-meta {
     width: 100%;
     display: inline-block;
     vertical-align: top;
     border-top: 1px solid #ddd;
     padding: 15px 0 0;
     margin-top: 15px;
-  }
-  .type-article .article-meta .meta-box {
+}
+.type-article .article-meta .meta-box {
     float: left;
-  }
-  .type-article .article-meta .meta-box span {
+}
+.type-article .article-meta .meta-box span {
     font-size: 12px;
     margin-right: 8px;
-  }
-  .type-article .article-meta .meta-box span a {
+}
+.type-article .article-meta .meta-box span a {
     color: #000;
-  }
-  .type-article .article-meta .article-share {
+}
+.type-article .article-meta .article-share {
     float: right;
-  }
-  .type-article .article-meta .article-share a {
+}
+.type-article .article-meta .article-share a {
     width: 28px;
     height: 28px;
     text-align: center;
@@ -223,5 +224,5 @@
     display: inline-block;
     color: #888;
     font-size: 14px;
-  }
+}
 </style>

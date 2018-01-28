@@ -1,55 +1,55 @@
 module.exports = {
-  /*
+    /*
   ** Headers of the page
   */
-  head: {
-    title: 'portafolio',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
-  css: [
-    '@darcusfenix/bootstrap-portfolio',
-    'assets/main.css'
-  ],
-  /*
+    head: {
+        title: "portafolio",
+        meta: [
+            { charset: "utf-8" },
+            {
+                name: "viewport",
+                content: "width=device-width, initial-scale=1"
+            },
+            {
+                hid: "description",
+                name: "description",
+                content: "Nuxt.js project"
+            }
+        ],
+        link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    },
+    css: ["@darcusfenix/bootstrap-portfolio", "assets/main.css"],
+    /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
-  router: {
-    middleware: 'stats'
-  },
-  /*
+    loading: { color: "#3B8070" },
+    router: {
+        middleware: "stats"
+    },
+    /*
   ** Build configuration
   */
-  build: {
-    vendor: ['axios'],
-    /*
+    build: {
+        vendor: ["axios"],
+        /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
+        extend(config, { isDev, isClient }) {
+            if (isDev && isClient) {
+                config.module.rules.push({
+                    enforce: "pre",
+                    test: /\.(js|vue)$/,
+                    loader: "eslint-loader",
+                    exclude: /(node_modules)/
+                })
+            }
+        }
+    },
+    modules: ["@nuxtjs/font-awesome"],
+    watchers: {
+        webpack: {
+            aggregateTimeout: 300,
+            poll: 1000
+        }
     }
-  },
-  modules: [
-    '@nuxtjs/font-awesome'
-  ],
-  watchers: {
-    webpack: {
-      aggregateTimeout: 300,
-      poll: 1000
-    }
-  }
 }

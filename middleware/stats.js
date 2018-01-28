@@ -1,6 +1,5 @@
-
-export default function ({ route }) {
-  return {
-    url: route.fullPath
-  }
+export default function({ route }) {
+    return {
+        url: route.fullPath
+    }
 }

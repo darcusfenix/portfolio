@@ -14,60 +14,70 @@
 
 </template>
 <script>
-  import ArticlePost from '~/components/ArticlePost.vue'
-  const get = () => ({data: { title: 'Mi blog', name: 'Juan' }})
+import ArticlePost from "~/components/ArticlePost.vue"
+const get = () => ({ data: { title: "Mi blog", name: "Juan" } })
 
-  export default {
+export default {
     components: {
-      ArticlePost
+        ArticlePost
     },
-    layout: 'blog',
-    async asyncData ({ params }) {
-      let { data } = await get(`https://my-api/posts/${params.id}`)
-      return {
-        title: data.title,
-        name: data.name,
-        posts: [
-          {
-            title: '!Renuncio!',
-            titleUrl: 'renuncio',
-            description: '¿Ya estás listo para renunciar? ¿Sabes si es el momento? ¿Por qué lo haces?',
-            date: '1 de Feb.',
-            totalShared: 250
-          },
-          {
-            title: 'title 2',
-            titleUrl: 'title-2',
-            description: '2 Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra',
-            date: '5 de Feb.',
-            totalShared: 50
-          },
-          {
-            title: 'title 3',
-            titleUrl: 'title-3',
-            description: '3 Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra',
-            date: '11 de Feb.',
-            totalShared: 10
-          }
-        ]
-      }
+    layout: "blog",
+    async asyncData({ params }) {
+        let { data } = await get(`https://my-api/posts/${params.id}`)
+        return {
+            title: data.title,
+            name: data.name,
+            posts: [
+                {
+                    title: "!Renuncio!",
+                    titleUrl: "renuncio",
+                    description:
+                        "¿Ya estás listo para renunciar? ¿Sabes si es el momento? ¿Por qué lo haces?",
+                    date: "1 de Feb.",
+                    totalShared: 250,
+                    imgBg: "http://lorempixel.com/400/200/"
+                },
+                {
+                    title: "title 2",
+                    titleUrl: "title-2",
+                    description:
+                        "2 Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra",
+                    date: "5 de Feb.",
+                    totalShared: 50
+                },
+                {
+                    title: "title 3",
+                    titleUrl: "title-3",
+                    description:
+                        "3 Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra",
+                    date: "11 de Feb.",
+                    totalShared: 10
+                }
+            ]
+        }
     },
-    fetch () {
-      // The `fetch` method is used to fill the store before rendering the page
+    fetch() {
+        // The `fetch` method is used to fill the store before rendering the page
     },
-    head () {
-      return {
-        meta: [
-          { charset: 'utf-8' },
-          { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-        ],
-        link: [
-          { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' }
-        ],
-        title: this.title
-      }
+    head() {
+        return {
+            meta: [
+                { charset: "utf-8" },
+                {
+                    name: "viewport",
+                    content: "width=device-width, initial-scale=1"
+                }
+            ],
+            link: [
+                {
+                    rel: "stylesheet",
+                    href: "https://fonts.googleapis.com/css?family=Roboto"
+                }
+            ],
+            title: this.title
+        }
     }
-  }
+}
 </script>
 <style>
 
