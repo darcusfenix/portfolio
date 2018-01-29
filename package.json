@@ -13,10 +13,16 @@
     "start:nuxt": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint",
+    "precommit": "npm run prettier",
     "prod": "npm run build && npm run start",
     "flow": "flow",
     "prettier": "prettier --config .prettierrc --write \"./components/**/*.vue\" \"./layouts/**/*.vue\" \"./pages/**/*.vue\" "
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,vue}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "@nuxtjs/font-awesome": "^1.0.3",

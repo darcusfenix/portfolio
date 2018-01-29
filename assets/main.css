@@ -24,21 +24,6 @@ img {
   max-width: 100%;
 }
 
-.alignright {
-  float: right;
-  margin: 0.5em 0 0.5em 2em;
-  text-align: right;
-}
-.alignleft {
-  float: left;
-  margin: 0.5em 2em 0.5em 0;
-}
-.aligncenter {
-  display: block;
-  margin: 1.5em auto;
-  text-align: center;
-}
-
 .mg-top-70{
   margin-top: 55px;
 }

@@ -10,6 +10,7 @@
       <div class="links">
         <a href="https://twitter.com/darcusfenix" target="_blank" class="button--grey">Twitter</a>
         <a href="https://github.com/darcusfenix" target="_blank" class="button--grey">GitHub</a>
+        <a href="/blog" class="button--grey">Blog</a>
         <a href="https://www.linkedin.com/in/darcusfenix" target="_blank" class="button--grey">Linkedin</a>
       </div>
     </div>

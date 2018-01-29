@@ -1,9 +1,9 @@
 <template>
   <div>
-    <blog-header
+    <article-header
       :title="header.title"
       :description="header.description"
-      :imgBg="header.imgBg" />
+      :imgBg="header.imgBg"/>
 
     <section class="blog-single">
       <div class="container">
@@ -11,84 +11,41 @@
           <div class="col-12 col-lg-8">
             <div class="single-blog-article">
               <article class="type-article single-article">
-                <div class="article-image">
-                  <img :src="imgLarge" :title="imgLarge" :alt="imgAltLarge">
-                  <div class="title-bar">
-                    <label>
-                      <a href="#">Work</a>
-                    </label>
-                    <h3>Take a Look Around our App</h3>
-                    <span class="article-date">Novembar 24, 2017</span>
-                  </div>
-                </div>
+
+                <article-image
+                  :title="article.title"
+                  :date="article.date"
+                  :imgLarge="imgLarge"
+                  :imgAltLarge="imgAltLarge"/>
+
                 <div class="article-content">
-                  <div class="dropcap">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. C0
-                      um sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet,
-                      consectetuer adipiscing elit. Aenean <i>commodo</i> ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-                      et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                  </div>
-                  <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et <a href="#">magnis</a>
-                    dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    <u>Aenean commodo</u> ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                    nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                  <blockquote><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p></blockquote>
-                  <h4>Lorem ipsum dolor sit amet</h4>
-                  <figure class="alignleft">
-                    <img src="http://beyarsolutions.com/miki/miki/static/img/alignleft.png" title="Blog" alt="blog">
-                    <figcaption class="caption-text">This is an short caption</figcaption>
-                  </figure>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet,
-                    consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                    <strong>Cum sociis natoque</strong> penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum
-                    dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-                    et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-                    mus. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                  <h4>Lorem ipsum dolor sit amet</h4>
-                  <figure class="alignright">
-                    <img src="http://beyarsolutions.com/miki/miki/static/img/alignright.png" title="Blog" alt="blog">
-                    <figcaption class="caption-text">This is an short caption</figcaption>
-                  </figure>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                    <strong>Cum sociis natoque</strong> penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem
-                    ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet,
-                    consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                    dis parturient montes, nascetur ridiculus mus. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-                    et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                  <h4>Lorem ipsum dolor sit amet</h4><p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                  nascetur ridiculus mus. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                  <figure class="aligncenter">
-                    <img src="http://beyarsolutions.com/miki/miki/static/img/aligncente.png" title="Blog" alt="blog">
-                    <figcaption class="caption-text">This is an short caption</figcaption>
-                  </figure>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem
-                    ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                    <strong>Cum sociis natoque</strong> penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet,
-                    consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                    parturient montes, nascetur ridiculus mus.</p>
-                </div>
-                <div class="article-meta"><div class="meta-box"> <span><em>By</em> Luther</span> <span><a href="#"><i class="fa fa-comment-o"></i>3 comments</a></span>
-                </div>
-                  <div class="article-share">
-                    <a href="#"><i class="fa fa-heart-o"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                  <div v-for="item in article.content">
+
+                    <div class="dropcap" v-if="item.type === 'dropcap'">
+                      <p>{{item.text}}</p>
+                    </div>
+
+                    <p v-if="item.type === 'p'">{{item.text}}</p>
+
+                    <blockquote v-if="item.type === 'blockquote'">
+                      <p>{{item.text}}</p>
+                    </blockquote>
+
+                    <h4 v-if="item.type === 'h4'">{{item.text}}</h4>
+
+                    <article-figure
+                      :type="item.type"
+                      :caption="item.caption"
+                      :alt="item.alt"
+                      :img="item.img"/>
+
                   </div>
                 </div>
+
+                <article-meta
+                  :box="metaBox"
+                  :social="social"/>
+
               </article>
             </div>
           </div>
@@ -96,14 +53,19 @@
       </div>
     </section>
   </div>
-
 </template>
 <script>
-import BlogHeader from "~/components/BlogHeader.vue"
+import ArticleHeader from "~/components/ArticleHeader"
+import ArticleImage from "~/components/AritcleImage"
+import ArticleFigure from "~/components/ArticleFigure"
+import ArticleMeta from "~/components/ArticleMeta"
 
 export default {
     components: {
-        BlogHeader
+        ArticleHeader,
+        ArticleImage,
+        ArticleFigure,
+        ArticleMeta
     },
     layout: "blog",
     async asyncData({ params }) {
@@ -115,7 +77,104 @@ export default {
                 imgBg: "http://lorempixel.com/g/1900/600/"
             },
             imgLarge: "http://lorempixel.com/720/400/",
-            imgAltLarge: "Blog List"
+            imgAltLarge: "Blog List",
+            article: {
+                title: "Take a Look Around our App",
+                date: "Novembar 24, 2017",
+                content: [
+                    {
+                        type: "dropcap",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. C0 um sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean <i>commodo</i> ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+                    },
+                    {
+                        type: "p",
+                        text:
+                            'Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et <a href="#">magnis</a> dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <u>Aenean commodo</u> ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+                    },
+                    {
+                        type: "blockquote",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+                    },
+                    {
+                        type: "h4",
+                        text: "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                        type: "figure-left",
+                        caption: "This is an short caption",
+                        alt: "Blog",
+                        img: "http://lorempixel.com/250/350/"
+                    },
+                    {
+                        type: "p",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. <strong>Cum sociis natoque</strong> penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    },
+                    {
+                        type: "h4",
+                        text: "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                        type: "figure-right",
+                        caption: "This is an short caption",
+                        alt: "Blog",
+                        img: "http://lorempixel.com/250/350/"
+                    },
+                    {
+                        type: "p",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. <strong>Cum sociis natoque</strong> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    },
+                    {
+                        type: "h4",
+                        text: "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                        type: "figure-center",
+                        caption: "This is an short caption",
+                        alt: "Blog",
+                        img: "http://lorempixel.com/750/250/"
+                    },
+                    {
+                        type: "p",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. <strong>Cum sociis natoque</strong> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    }
+                ]
+            },
+            social: [
+                {
+                    type: "icon-fa",
+                    className: "fa fa-heart-o",
+                    url: "https://twitter.com/DARCUSFENIX"
+                },
+                {
+                    type: "icon-fa",
+                    className: "fa fa-facebook",
+                    url: "https://twitter.com/DARCUSFENIX"
+                },
+                {
+                    type: "icon-fa",
+                    className: "fa fa-twitter",
+                    url: "https://twitter.com/DARCUSFENIX"
+                },
+                {
+                    type: "icon-fa",
+                    className: "fa fa-google-plus",
+                    url: "https://twitter.com/DARCUSFENIX"
+                },
+                {
+                    type: "icon-fa",
+                    className: "fa fa-pinterest",
+                    url: "https://twitter.com/DARCUSFENIX"
+                }
+            ],
+            metaBox: {
+                author: "Juan Crisóstomo",
+                totalComments: 15
+            }
         }
     }
 }
@@ -124,6 +183,7 @@ export default {
 .blog-single {
     padding: 60px 0;
 }
+
 .type-article {
     padding: 15px;
     background: #fff;
@@ -131,74 +191,21 @@ export default {
         rgba(58, 78, 95, 0.05) 0 -5px 16px;
     margin-bottom: 30px;
 }
-.type-article .article-image {
-    margin-bottom: 20px;
-    position: relative;
-}
-.type-article .title-bar {
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.65);
-}
-.type-article .title-bar label {
-    font-style: italic;
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-}
-.type-article .title-bar h3 {
-    font-weight: 600;
-    font-size: 26px;
-    margin: 0;
-    padding: 0 0 5px;
-    color: #fff;
-}
-.type-article .title-bar .article-date {
-    color: #fff;
-    font-size: 12px;
-}
+
 .type-article p {
     line-height: 1.7;
+    margin-bottom: -60px;
 }
+
+.type-article h4 {
+    margin-bottom: -60px;
+}
+
 .single-article blockquote {
     padding: 0px 20px;
     margin: 30px 0;
     border-left: 5px solid #ccc;
     font-style: italic;
-    font-size: 14px;
-}
-.type-article .article-meta {
-    width: 100%;
-    display: inline-block;
-    vertical-align: top;
-    border-top: 1px solid #ddd;
-    padding: 15px 0 0;
-    margin-top: 15px;
-}
-.type-article .article-meta .meta-box {
-    float: left;
-}
-.type-article .article-meta .meta-box span {
-    font-size: 12px;
-    margin-right: 8px;
-}
-.type-article .article-meta .meta-box span a {
-    color: #000;
-}
-.type-article .article-meta .article-share {
-    float: right;
-}
-.type-article .article-meta .article-share a {
-    width: 28px;
-    height: 28px;
-    text-align: center;
-    line-height: 28px;
-    border-radius: 50%;
-    display: inline-block;
-    color: #888;
     font-size: 14px;
 }
 </style>
