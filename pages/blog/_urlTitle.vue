@@ -1,11 +1,9 @@
 <template>
   <div>
-    <section class="blog-banner-wrapped">
-      <div class="container">
-        <h2>BLOG DETAILS</h2>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-      </div>
-    </section>
+    <blog-header
+      :title="header.title"
+      :description="header.description"
+      :imgBg="header.imgBg" />
 
     <section class="blog-single">
       <div class="container">
@@ -14,7 +12,7 @@
             <div class="single-blog-article">
               <article class="type-article single-article">
                 <div class="article-image">
-                  <img src="http://beyarsolutions.com/miki/miki/static/img/blog-3.png" title="Blog List" alt="Blog List">
+                  <img :src="imgLarge" :title="imgLarge" :alt="imgAltLarge">
                   <div class="title-bar">
                     <label>
                       <a href="#">Work</a>
@@ -101,36 +99,28 @@
 
 </template>
 <script>
+import BlogHeader from "~/components/BlogHeader.vue"
+
 export default {
-    layout: "blog"
+    components: {
+        BlogHeader
+    },
+    layout: "blog",
+    async asyncData({ params }) {
+        return {
+            header: {
+                title: "BLOG DETAILS",
+                description:
+                    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+                imgBg: "http://lorempixel.com/g/1900/600/"
+            },
+            imgLarge: "http://lorempixel.com/720/400/",
+            imgAltLarge: "Blog List"
+        }
+    }
 }
 </script>
 <style>
-.blog-banner-wrapped {
-    padding: 200px 0 100px;
-    text-align: center;
-    position: relative;
-    background-color: #000;
-    background-image: url("http://beyarsolutions.com/miki/miki/static/img/blog-banner1.png");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.blog-banner-wrapped .container {
-    position: relative;
-    z-index: 1;
-}
-.blog-banner-wrapped h2 {
-    color: #fff;
-    font-size: 32px;
-    font-weight: 600;
-    margin: 0 0 15px;
-}
-.blog-banner-wrapped p {
-    color: #fff;
-    width: 550px;
-    max-width: 100%;
-    margin: 0 auto;
-}
 .blog-single {
     padding: 60px 0;
 }
@@ -165,20 +155,6 @@ export default {
     margin: 0;
     padding: 0 0 5px;
     color: #fff;
-}
-.alignright {
-    float: right;
-    margin: 0.5em 0 0.5em 2em;
-    text-align: right;
-}
-.alignleft {
-    float: left;
-    margin: 0.5em 2em 0.5em 0;
-}
-.aligncenter {
-    display: block;
-    margin: 1.5em auto;
-    text-align: center;
 }
 .type-article .title-bar .article-date {
     color: #fff;

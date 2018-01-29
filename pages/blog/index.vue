@@ -8,6 +8,7 @@
         :description="post.description"
         :date="post.date"
         :totalShared="post.totalShared"
+        :imgMedium="post.imgMedium"
       />
     </div>
   </section>
@@ -35,7 +36,7 @@ export default {
                         "¿Ya estás listo para renunciar? ¿Sabes si es el momento? ¿Por qué lo haces?",
                     date: "1 de Feb.",
                     totalShared: 250,
-                    imgBg: "http://lorempixel.com/400/200/"
+                    imgMedium: "http://lorempixel.com/350/200/"
                 },
                 {
                     title: "title 2",
@@ -43,7 +44,8 @@ export default {
                     description:
                         "2 Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra",
                     date: "5 de Feb.",
-                    totalShared: 50
+                    totalShared: 50,
+                    imgMedium: "http://lorempixel.com/350/200/"
                 },
                 {
                     title: "title 3",
@@ -51,7 +53,8 @@ export default {
                     description:
                         "3 Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra",
                     date: "11 de Feb.",
-                    totalShared: 10
+                    totalShared: 10,
+                    imgMedium: "http://lorempixel.com/350/200/"
                 }
             ]
         }

@@ -10,7 +10,8 @@ module.exports = {
     plugins: ["html", "prettier"],
     // add your custom rules here
     rules: {
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "prettier/eol-last": "never"
     },
     globals: {}
 }

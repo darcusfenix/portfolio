@@ -1,8 +1,9 @@
+// @flow
 <template>
   <div class="article-post">
     <div class="article-post-thumbnail">
       <a :href="'/blog/'+ titleUrl + '.html'">
-        <img src="https://demo.themeix.com/html/nextblog/images/article-post.jpg" alt="article post image">
+        <img :src="imgMedium" :alt="imgAltPrincipal">
       </a>
     </div>
     <div class="article-post-intro">
@@ -17,7 +18,15 @@
 </template>
 <script>
 export default {
-    props: ["title", "titleUrl", "description", "date", "totalShared"]
+    props: [
+        "title",
+        "titleUrl",
+        "description",
+        "date",
+        "totalShared",
+        "imgMedium",
+        "imgAltPrincipal"
+    ]
 }
 </script>
 <style>
