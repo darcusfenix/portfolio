@@ -45,7 +45,7 @@
                 <article-meta
                   :box="metaBox"
                   :social="social"/>
-
+                <button @click="$store.commit('increment')">{{ $store.state.counter }}</button>
               </article>
             </div>
           </div>

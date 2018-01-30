@@ -27,7 +27,8 @@
   "dependencies": {
     "@nuxtjs/font-awesome": "^1.0.3",
     "axios": "^0.17.1",
-    "nuxt": "^1.2.1"
+    "nuxt": "^1.2.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

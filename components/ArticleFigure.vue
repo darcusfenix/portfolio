@@ -15,7 +15,7 @@ export default {
     },
     computed: {
         className: function() {
-          const ft = this.type.split("-")[1];
+            const ft = this.type.split("-")[1]
             let type
             switch (ft) {
                 case "right":
