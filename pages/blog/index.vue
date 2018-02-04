@@ -17,43 +17,18 @@
 </template>
 <script>
 import { mapMutations } from "vuex"
+import axios from "axios"
 import ArticlePost from "~/components/ArticlePost.vue"
 
 const get = () => {
-    return new Promise((resolve) => {
-        setTimeout(
-            () =>
-                resolve([
-                    {
-                        title: "!Renuncio!",
-                        titleUrl: "renuncio",
-                        description:
-                            "¿Ya estás listo para renunciar? ¿Sabes si es el momento? ¿Por qué lo haces?",
-                        date: "1 de Feb.",
-                        totalShared: 250,
-                        imgMedium: "http://lorempixel.com/350/200/"
-                    },
-                    {
-                        title: "title 2",
-                        titleUrl: "title-2",
-                        description:
-                            "2 Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra",
-                        date: "5 de Feb.",
-                        totalShared: 50,
-                        imgMedium: "http://lorempixel.com/350/200/"
-                    },
-                    {
-                        title: "title 3",
-                        titleUrl: "title-3",
-                        description:
-                            "3 Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra",
-                        date: "11 de Feb.",
-                        totalShared: 10,
-                        imgMedium: "http://lorempixel.com/350/200/"
-                    }
-                ]),
-            3000
-        )
+    return new Promise((resolve, reject) => {
+        axios.get("http://crisostomo.soy/api/posts")
+          .then(function (response) {
+            resolve(response.data)
+          })
+          .catch(function (error) {
+            reject([])
+          });
     })
 }
 
@@ -84,7 +59,7 @@ export default {
         })
     },
     async asyncData({ params, store }) {
-        let data = await get(`https://my-api/posts/${params.id}`)
+        let data = await get()
 
         store.commit("posts/set", data)
         return {
