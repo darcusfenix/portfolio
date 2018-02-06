@@ -83,8 +83,7 @@ export default {
                 date: "Novembar 24, 2017",
                 content: []
             },
-            social: [
-            ],
+            social: [],
             metaBox: {
                 author: "Juan Crisóstomo",
                 totalComments: 15

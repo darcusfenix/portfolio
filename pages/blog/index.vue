@@ -66,8 +66,8 @@ export default {
         }
     },
     async mounted() {
-      let data = await get()
-      this.$store.commit("posts/set", data)
+        let data = await get()
+        this.$store.commit("posts/set", data)
     },
     head() {
         return {
