@@ -1,3 +1,5 @@
+require("dotenv").config()
+console.log(process.env)
 module.exports = {
     /*
   ** Headers of the page
@@ -36,9 +38,11 @@ module.exports = {
     */
         extend(config, { isDev, isClient }) {
             if (isDev && isClient) {
-
             }
         }
     },
-    modules: ["@nuxtjs/font-awesome"]
+    modules: ["@nuxtjs/font-awesome"],
+    env: {
+        baseUrl: process.env.BASE_URL || "http://localhost:3000"
+    }
 }

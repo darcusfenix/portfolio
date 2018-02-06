@@ -81,95 +81,9 @@ export default {
             article: {
                 title: "Take a Look Around our App",
                 date: "Novembar 24, 2017",
-                content: [
-                    {
-                        type: "dropcap",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. C0 um sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean <i>commodo</i> ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-                    },
-                    {
-                        type: "p",
-                        text:
-                            'Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et <a href="#">magnis</a> dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <u>Aenean commodo</u> ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
-                    },
-                    {
-                        type: "blockquote",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
-                    },
-                    {
-                        type: "h4",
-                        text: "Lorem ipsum dolor sit amet"
-                    },
-                    {
-                        type: "figure-left",
-                        caption: "This is an short caption",
-                        alt: "Blog",
-                        img: "http://lorempixel.com/250/350/"
-                    },
-                    {
-                        type: "p",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. <strong>Cum sociis natoque</strong> penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                    },
-                    {
-                        type: "h4",
-                        text: "Lorem ipsum dolor sit amet"
-                    },
-                    {
-                        type: "figure-right",
-                        caption: "This is an short caption",
-                        alt: "Blog",
-                        img: "http://lorempixel.com/250/350/"
-                    },
-                    {
-                        type: "p",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. <strong>Cum sociis natoque</strong> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                    },
-                    {
-                        type: "h4",
-                        text: "Lorem ipsum dolor sit amet"
-                    },
-                    {
-                        type: "figure-center",
-                        caption: "This is an short caption",
-                        alt: "Blog",
-                        img: "http://lorempixel.com/750/250/"
-                    },
-                    {
-                        type: "p",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. <strong>Cum sociis natoque</strong> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-                    }
-                ]
+                content: []
             },
             social: [
-                {
-                    type: "icon-fa",
-                    className: "fa fa-heart-o",
-                    url: "https://twitter.com/DARCUSFENIX"
-                },
-                {
-                    type: "icon-fa",
-                    className: "fa fa-facebook",
-                    url: "https://twitter.com/DARCUSFENIX"
-                },
-                {
-                    type: "icon-fa",
-                    className: "fa fa-twitter",
-                    url: "https://twitter.com/DARCUSFENIX"
-                },
-                {
-                    type: "icon-fa",
-                    className: "fa fa-google-plus",
-                    url: "https://twitter.com/DARCUSFENIX"
-                },
-                {
-                    type: "icon-fa",
-                    className: "fa fa-pinterest",
-                    url: "https://twitter.com/DARCUSFENIX"
-                }
             ],
             metaBox: {
                 author: "Juan Crisóstomo",

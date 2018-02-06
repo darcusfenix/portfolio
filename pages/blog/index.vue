@@ -17,18 +17,19 @@
 </template>
 <script>
 import { mapMutations } from "vuex"
-import axios from "axios"
+import axios from "~/plugins/axios"
 import ArticlePost from "~/components/ArticlePost.vue"
 
 const get = () => {
     return new Promise((resolve, reject) => {
-        axios.get("http://crisostomo.soy/api/posts")
-          .then(function (response) {
-            resolve(response.data)
-          })
-          .catch(function (error) {
-            reject([])
-          });
+        axios
+            .get("/api/posts")
+            .then(function(response) {
+                resolve(response.data)
+            })
+            .catch(function(error) {
+                reject([])
+            })
     })
 }
 
@@ -59,16 +60,14 @@ export default {
         })
     },
     async asyncData({ params, store }) {
-        let data = await get()
-
-        store.commit("posts/set", data)
         return {
             title: "blog title",
             name: "blog name"
         }
     },
-    fetch() {
-        // The `fetch` method is used to fill the store before rendering the page
+    async mounted() {
+      let data = await get()
+      this.$store.commit("posts/set", data)
     },
     head() {
         return {
