@@ -1,5 +1,4 @@
 require("dotenv").config()
-console.log(process.env)
 module.exports = {
     /*
   ** Headers of the page
@@ -32,7 +31,7 @@ module.exports = {
   ** Build configuration
   */
     build: {
-        vendor: ["axios"],
+        vendor: ["axios", "isomorphic-fetch", "apollo-client", "graphql-tag"],
         /*
     ** Run ESLint on save
     */

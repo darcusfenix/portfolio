@@ -11,27 +11,24 @@
         :imgMedium="post.imgMedium"
       />
     </div>
-    <button v-on:click="addPost" >add post</button>
   </section>
 
 </template>
 <script>
-import { mapMutations } from "vuex"
-import axios from "~/plugins/axios"
+import apollo from "~/plugins/apollo"
 import ArticlePost from "~/components/ArticlePost.vue"
+import gql from "graphql-tag"
 
-const get = () => {
-    return new Promise((resolve, reject) => {
-        axios
-            .get("/api/posts")
-            .then(function(response) {
-                resolve(response.data)
-            })
-            .catch(function(error) {
-                reject([])
-            })
-    })
-}
+const postsQuery = gql`
+    query {
+        posts {
+            title
+            description
+            date
+            imgMedium
+        }
+    }
+`
 
 export default {
     components: {
@@ -43,22 +40,7 @@ export default {
             return this.$store.state.posts.list
         }
     },
-    methods: {
-        addPost(e) {
-            this.$store.commit("posts/add", {
-                title: "title 3",
-                titleUrl: "title-3",
-                description:
-                    "3 Lorem ipsum dolor sit amet, nec ante integer eget, dolor lectus consequat vehicula lorem mattis, ultricies mauris elit nostra",
-                date: "11 de Feb.",
-                totalShared: 10,
-                imgMedium: "http://lorempixel.com/350/200/"
-            })
-        },
-        ...mapMutations({
-            toggle: "todos/toggle"
-        })
-    },
+    methods: {},
     async asyncData({ params, store }) {
         return {
             title: "blog title",
@@ -66,8 +48,9 @@ export default {
         }
     },
     async mounted() {
-        let data = await get()
-        this.$store.commit("posts/set", data)
+        apollo.query({ query: postsQuery }).then((res) => {
+            this.$store.commit("posts/set", res.data.posts)
+        })
     },
     head() {
         return {
