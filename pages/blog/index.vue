@@ -3,6 +3,8 @@
   <section class="row">
     <div class="col-xs-12 col-sm-6 col-md-4" v-for="post in posts">
       <article-post
+        :index="post.index"
+        :id="post._id"
         :title="post.title"
         :titleUrl="post.titleUrl"
         :description="post.description"
@@ -22,8 +24,11 @@ import gql from "graphql-tag"
 const postsQuery = gql`
     query {
         posts {
+            _id
             title
+            titleUrl
             description
+            totalShared
             date
             imgMedium
         }

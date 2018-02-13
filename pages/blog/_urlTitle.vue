@@ -15,8 +15,8 @@
                 <article-image
                   :title="article.title"
                   :date="article.date"
-                  :imgLarge="imgLarge"
-                  :imgAltLarge="imgAltLarge"/>
+                  :imgLarge="article.imgLarge"
+                  :imgAltLarge="article.imgAltLarge"/>
 
                 <div class="article-content">
                   <div v-for="item in article.content">
@@ -45,7 +45,6 @@
                 <article-meta
                   :box="metaBox"
                   :social="social"/>
-                <button @click="$store.commit('increment')">{{ $store.state.counter }}</button>
               </article>
             </div>
           </div>
@@ -59,6 +58,8 @@ import ArticleHeader from "~/components/ArticleHeader"
 import ArticleImage from "~/components/AritcleImage"
 import ArticleFigure from "~/components/ArticleFigure"
 import ArticleMeta from "~/components/ArticleMeta"
+import apollo from "~/plugins/apollo"
+import gql from "graphql-tag"
 
 export default {
     components: {
@@ -76,18 +77,57 @@ export default {
                     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
                 imgBg: "http://lorempixel.com/g/1900/600/"
             },
-            imgLarge: "http://lorempixel.com/720/400/",
-            imgAltLarge: "Blog List",
-            article: {
-                title: "Take a Look Around our App",
-                date: "Novembar 24, 2017",
-                content: []
-            },
-            social: [],
             metaBox: {
                 author: "Juan Crisóstomo",
                 totalComments: 15
             }
+        }
+    },
+    computed: {
+        article() {
+            return this.$store.state.posts.item
+        },
+        social() {
+            return this.$store.state.posts.social
+        }
+    },
+    async mounted() {
+        const postQuery = gql`
+            query {
+                post(id: "${this.$route.query.id}") {
+                    title
+                    date
+                    content {
+                      type,
+                      text,
+                      img,
+                      alt,
+                      caption
+                    }
+                },
+                social {
+                    _id
+                    type
+                    className
+                    url
+                    active
+                }
+            }
+        `
+        apollo
+            .query({ query: postQuery })
+            .then((res) => {
+                this.$store.commit("posts/setItem", res.data.post)
+                this.$store.commit("posts/social", res.data.social)
+            })
+            .catch((e) => {
+                console.error(e)
+                this.$router.push("/blog")
+            })
+    },
+    head() {
+        return {
+            title: this.article.title
         }
     }
 }

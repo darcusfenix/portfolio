@@ -2,12 +2,12 @@
 <template>
   <div class="article-post">
     <div class="article-post-thumbnail">
-      <a :href="'/blog/'+ titleUrl + '.html'">
+      <a :href="url">
         <img :src="imgMedium" :alt="imgAltPrincipal">
       </a>
     </div>
     <div class="article-post-intro">
-      <h5><a :href="'/blog/'+ titleUrl + '.html'">{{title}}</a></h5>
+      <h5><a :href="url">{{title}}</a></h5>
       <p>{{description}}</p>
       <ul class="article-post-meta list-inline">
         <li class="list-inline-item"><a href="#">{{date}}</a></li>
@@ -19,6 +19,7 @@
 <script>
 export default {
     props: [
+        "id",
         "title",
         "titleUrl",
         "description",
@@ -26,7 +27,12 @@ export default {
         "totalShared",
         "imgMedium",
         "imgAltPrincipal"
-    ]
+    ],
+    computed: {
+        url() {
+            return `/blog/${this.titleUrl}.html?id=${this.id}`
+        }
+    }
 }
 </script>
 <style>
