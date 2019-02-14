@@ -1,5 +1,0 @@
-[[redirects]]
-from = "http://localhost:3000"
-to = "/"
-status = 301
-force = false
