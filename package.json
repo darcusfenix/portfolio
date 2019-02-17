@@ -16,6 +16,7 @@
     "precommit": "npm run prettier",
     "prod": "npm run build && npm run start:nuxt",
     "flow": "flow",
+    "prod:netlify": "npm run generate",
     "prettier": "prettier --config .prettierrc --write \"./components/**/*.vue\" \"./layouts/**/*.vue\" \"./pages/**/*.vue\" "
   },
   "lint-staged": {
