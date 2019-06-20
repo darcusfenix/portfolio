@@ -5,7 +5,7 @@
         Juan Crisóstomo
       </h1>
       <h2 class="subtitle">
-        JavaScript Developer
+        JavaScript Developer :)
       </h2>
       <div class="links">
         <a href="https://twitter.com/darcusfenix" target="_blank" class="button--grey">Twitter</a>
